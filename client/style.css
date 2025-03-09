@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid #333;
+    margin: 20px 0;
+}
+
+.scoreboard {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player {
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.player-1 {
+    background-color: #ff4d4d;
+}
+
+.player-2 {
+    background-color: #4d79ff;
+}
