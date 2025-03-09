@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="game-container">
+      <canvas id="gameCanvas" tabindex="1"></canvas>
+      <div class="focus-message" id="focusMessage">
+          Click here to play<br>(WASD or Arrows to move, A/D to strafe, Space to shoot)
+      </div>
+      <div class="game-over" id="gameOverBanner">
+          <h2>GAME OVER</h2>
+          <p>Time: <span id="timePlayedLoss">0:00</span></p>
+          <button onclick="restartGame()">Play Again</button>
+      </div>
+      <div class="game-won" id="gameWonBanner">
+          <h2>VICTORY!</h2>
+          <p>Time: <span id="timePlayedWin">0:00</span></p>
+          <button onclick="restartGame()">Play Again</button>
+      </div>
+      <div class="timer" id="gameTimer">Time: 0:00</div>
+      <div class="info">
+          Arrows: <span id="arrowCount">3</span><br>
+          Lives: <span id="livesCount">3</span>
+      </div>
+  </div>
+  <!-- Load libraries -->
+  <script src="js/settings.js"></script>
+  <script src="js/gameState.js"></script>
+  <script src="js/visualEffects.js"></script>
+  <script src="js/maze.js"></script>
+  <script src="js/camera.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/firing.js"></script>
+  <script src="js/collision.js"></script>
+  <script src="js/joystick.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/gameLoop.js"></script>
+</body>
+</html>
