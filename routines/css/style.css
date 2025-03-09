@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+canvas {
+    display: block;
+    background-color: white;
+    border: 1px solid #ccc;
+    outline: none; /* allow focus without outline */
+}
+
+.game-container {
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Add focus indicator styling */
+.focus-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    pointer-events: none; /* Allow clicks to pass through */
+    opacity: 0.8;
+    transition: opacity 0.5s;
+}
+
+canvas:focus + .focus-message {
+    opacity: 0;
+}
+
+/* When canvas has focus, add a subtle highlight */
+canvas:focus {
+    box-shadow: 0 0 15px 5px rgba(0, 100, 255, 0.5);
+}
+
+/* Game over banner styling */
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    z-index: 10;
+    border: 3px solid #ff3333;
+    display: none;
+}
+
+.game-over h2 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    color: #ff3333;
+}
+
+.game-over p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.game-over button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.game-over button:hover {
+    background-color: #cc0000;
+}
+
+/* Game won banner styling */
+.game-won {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    z-index: 10;
+    border: 3px solid #33cc33;
+    display: none;
+}
+
+.game-won h2 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    color: #33cc33;
+}
+
+.game-won p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.game-won button {
+    background-color: #33cc33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.game-won button:hover {
+    background-color: #29a329;
+}
+
+/* Timer styling */
+.timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: rgba(255,255,255,0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Joystick styles will be added dynamically by the joystick.js */

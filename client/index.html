@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplayer Maze Game</title>
+    <title>Gladiators</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Multiplayer Maze Game</h1>
-        <canvas id="mazeCanvas" width="250" height="250"></canvas>
-        
-        <div class="scoreboard">
-            <h2>Scoreboard</h2>
-            <div class="player-info">
-                <div class="player player-1">Player 1</div>
-                <div class="player player-2">Player 2</div>
-            </div>
-        </div>
+    <div id="menu">
+        <h1>Gladiators</h1>
+        <button id="start-game">Enter the Arena</button>
     </div>
     
-    <script src="game.js"></script>
+    <div id="game-container" style="display: none;">
+        <canvas id="game-canvas" width="400" height="400" tabindex="1"></canvas>
+        <div id="scoreboard">Scoreboard Placeholder</div>
+        <div class="controls">
+            <!-- These divs are still needed for positioning, but we'll handle touch events directly -->
+        </div>
+    </div>
+    <!-- Remove nipplejs, we're using direct touch controls instead -->e nipplejs, we're using direct touch controls instead -->
+    <script src="game.js"></script>t src="game.js"></script>
 </body>
 </html>
-
